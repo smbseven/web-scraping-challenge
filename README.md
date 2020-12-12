@@ -2,7 +2,6 @@
 
 <h2>Web Scraping Challenge Homework<h2>. 
   
-The present homework is by far the most challenging but integrated. It helped integrate knowledge in many aspects of the bootcamp
 
 <h3>Steps<h3>.
   
@@ -39,5 +38,8 @@ Get images of the 4 Mars hemispheres
 <h4>Step 2. MongoDB and Flask Application<h4>. 
   
 - Convert jupyter notebook to python script (scrape_mars.py)
-- Create an 
+- Script automatically launches and scrapes data
+- Create an index.html page
+- Create a new app (app.py) that calls the scrape_mars script and launches the index.html page. The app also creates a DB within mongo DB to store. 
+a dictionary created in the script
 
