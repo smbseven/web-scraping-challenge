@@ -9,7 +9,7 @@ import pandas as pd
 import time
 
 
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
 
 def debugger(contents):
     file = open('_temp.txt',"w",encoding="utf-8")
@@ -17,10 +17,11 @@ def debugger(contents):
     file.close()
 
 def scrape():
+    init_browser():
     executable_path = {"executable_path": ChromeDriverManager().install()}
     browser = Browser("chrome", **executable_path, headless=False)
-    #browser = init_browser
-    #mars_dict = {}
+    browser = init_browser
+    mars_dict = {}
 
 
     #NASA Mars News
@@ -107,7 +108,7 @@ def scrape():
         
         # Collect image link by browsing to hemisphere page
         hemisphere_link = hemisphere.a["href"]    
-        browser.visit(base_url + hemisphere_link)
+        browser.visit(usgs_url + hemisphere_link)
         
         image_html = browser.html
         image_soup = bs(image_html, 'html.parser')
